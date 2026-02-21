@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SwiftlyGame</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+<style>
+    /* Global Styles */
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #0a0a0a; /* dark background */
+        color: #fff;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+    a { color: #39FF14; text-decoration: none; transition: all 0.3s; }
+    a:hover { color: #FF4500; text-decoration: underline; }
+
+    /* Header */
+    header {
+        text-align: center;
+        padding: 120px 20px;
+        background: linear-gradient(180deg, #111 0%, #1a1a1a 100%);
+        position: relative;
+        overflow: hidden;
+    }
+    header .logo {
+        width: 300px; /* bigger logo */
+        animation: float 3s ease-in-out infinite alternate;
+    }
+    header h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 4rem;
+        margin: 20px 0 10px 0;
+        background: linear-gradient(90deg, #39FF14, #FFD700, #FF4500);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: fadeInDown 1s ease forwards;
+    }
+    header p {
+        font-size: 1.3rem;
+        max-width: 700px;
+        margin: 0 auto;
+        animation: fadeIn 2s ease forwards;
+        color: #ccc;
+    }
+
+    /* Sections */
+    section {
+        padding: 80px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    section h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        text-align: center;
+        position: relative;
+        color: #39FF14;
+    }
+    section h2::after {
+        content: '';
+        width: 80px;
+        height: 3px;
+        background: #FF4500;
+        display: block;
+        margin: 10px auto 0;
+        border-radius: 2px;
+    }
+    section p { text-align: center; font-size: 1.2rem; line-height: 1.6; color: #aaa; }
+
+    /* Projects */
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .project-card {
+        background: #111;
+        border-radius: 15px;
+        overflow: hidden;
+        width: 300px;
+        box-shadow: 0 10px 25px rgba(0,255,20,0.2);
+        transition: transform 0.4s, box-shadow 0.4s;
+        cursor: pointer;
+    }
+    .project-card:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 20px 35px rgba(0,255,20,0.5);
+    }
+    .project-card img { width: 100%; display: block; }
+    .project-card h3 {
+        text-align: center;
+        margin: 15px 0;
+        font-family: 'Montserrat', sans-serif;
+        color: #39FF14;
+    }
+
+    /* Contact */
+    .contact a { display: inline-block; margin: 10px; color: #39FF14; }
+    .contact a:hover { color: #FF4500; }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 40px 20px;
+        background: #111;
+        color: #888;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+        0% { opacity: 0; transform: translateY(-50px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    @keyframes float {
+        0% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-15px) scale(1.05); }
+        100% { transform: translateY(0px) scale(1); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        header h1 { font-size: 3rem; }
+        .projects { flex-direction: column; align-items: center; }
+        .project-card { width: 80%; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="SwiftlyGame.png" alt="SwiftlyGame Logo" class="logo">
+    <h1>SwiftlyGame</h1>
+    <p>Fast, fun, and fearless gaming experiences. Engaging and immersive games for players worldwide.</p>
+</header>
+
+<section id="about">
+    <h2>About SwiftlyGame</h2>
+    <p>Founded in 2015, SwiftlyGame is an indie AAA-style game studio focused on creating innovative gameplay experiences. From concept to AI programming, our projects deliver dynamic and memorable gameplay.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project-card">
+            <img src="game1.png" alt="Project 1">
+            <h3>Project 1</h3>
+        </div>
+        <div class="project-card">
+            <img src="game2.png" alt="Project 2">
+            <h3>Project 2</h3>
+        </div>
+        <div class="project-card">
+            <img src="game3.png" alt="Project 3">
+            <h3>Project 3</h3>
+        </div>
+        <div class="project-card">
+            <img src="game4.png" alt="Project 4">
+            <h3>Project 4</h3>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+        <p> Click : <a href="https://discord.gg/CGxpCn7FT">Discord</a></p>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 SwiftlyGame. All rights reserved.
+</footer>
+
+</body>
+</html>
